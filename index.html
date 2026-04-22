@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Murhi — Developer</title>
+    <title>David Murhi — Full-stack Developer</title>
     <style>
         * {
             margin: 0;
@@ -13,111 +13,295 @@
         }
 
         body {
-            font-family: -apple-system, sans-serif;
-            background: #0a0a0a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0d0d0d;
             color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 600px;
-            padding: 2rem;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 32px 80px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
         }
 
-        .title {
-            color: #888;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+        .nav-name {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
         }
 
-        p {
-            color: #aaa;
-            line-height: 1.7;
-            margin-bottom: 2rem;
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
 
-        .projects h2 {
-            font-size: 1rem;
+        .nav-links a {
+            font-size: 12px;
             color: #555;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: color 0.2s;
         }
 
-        .empty {
-            color: #444;
-            font-style: italic;
+        .nav-links a:hover {
+            color: #f0f0f0;
+        }
+
+        .hero {
+            margin-bottom: 72px;
+        }
+
+        .hero-tag {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 500;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.75;
+            max-width: 460px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 0.5px solid #1a1a1a;
+        }
+
+        .projects {
+            margin-bottom: 64px;
         }
 
         .project {
-            margin-bottom: 1.5rem;
-        }
-
-        .project a {
-            color: #f0f0f0;
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid #333;
-            padding-bottom: 2px;
-        }
-
-        .project a:hover {
-            border-color: #f0f0f0;
-        }
-
-        .project p {
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0.4rem;
-            margin-bottom: 0;
-        }
-
-        .links {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 0.5px solid #1a1a1a;
         }
 
-        .links a {
-            color: #f0f0f0;
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .proj-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .proj-desc {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .proj-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: #161616;
+            color: #444;
+            border: 0.5px solid #222;
+            letter-spacing: 0.03em;
+        }
+
+        .proj-link {
+            font-size: 11px;
+            color: #333;
             text-decoration: none;
-            border-bottom: 1px solid #333;
-            padding-bottom: 2px;
+            white-space: nowrap;
+            margin-top: 2px;
+            transition: color 0.2s;
         }
 
-        .links a:hover {
-            border-color: #f0f0f0;
+        .proj-link:hover {
+            color: #f0f0f0;
+        }
+
+        .stack {
+            margin-bottom: 64px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .skill-item {
+            font-size: 12px;
+            color: #444;
+        }
+
+        .skill-item span {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #f0f0f0;
+            margin-bottom: 2px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 32px;
+            border-top: 0.5px solid #1a1a1a;
+        }
+
+        .available {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #2d6a4f;
+            margin-bottom: 6px;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #2d6a4f;
+        }
+
+        .footer-email {
+            font-size: 12px;
+            color: #333;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            color: #444;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #f0f0f0;
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>David Murhi</h1>
-        <p class="title">Full-stack developer in training — Brisbane, QLD</p>
-        <p>Started my coding journey on 21 April 2025.
-            Building real projects with Python, JavaScript, and SQL.
-            This portfolio grows with every week.</p>
-        <div class="projects">
-            <h2>Projects</h2>
+
+        <nav>
+            <div class="nav-name">David Murhi</div>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/davidmurhi" target="_blank">GitHub</a>
+                <a href="mailto:davidmurhhi@gmail.com">Contact</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-tag">Full-stack developer — Brisbane, QLD</div>
+            <h1>Building things<br>for the web.</h1>
+            <p>Python, JavaScript, and SQL. I build full-stack applications — from backend APIs to frontend interfaces —
+                with a focus on clean code and real-world utility.</p>
+        </div>
+
+        <div class="projects" id="projects">
+            <div class="section-label">Projects</div>
+
             <div class="project">
-                <a href="https://github.com/davidmurhi/budget-tracker" target="_blank">CLI Budget Tracker</a>
-                <p>A command-line budget tracker built in Python. Add income and expenses,
-                    view balance, and save transactions to CSV. Built in Week 1.</p>
+                <div>
+                    <div class="proj-title">CLI Budget Tracker</div>
+                    <div class="proj-desc">Command-line application to track income and expenses. Persistent CSV
+                        storage, real-time balance calculation, full transaction history.</div>
+                    <div class="proj-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">CSV</span>
+                        <span class="tag">File I/O</span>
+                    </div>
+                </div>
+                <a class="proj-link" href="https://github.com/davidmurhi/budget-tracker" target="_blank">View →</a>
+            </div>
+
+        </div>
+
+        <div class="stack">
+            <div class="section-label">Stack</div>
+            <div class="skills-grid">
+                <div class="skill-item"><span>Python</span>Backend + scripting</div>
+                <div class="skill-item"><span>JavaScript</span>Frontend + React</div>
+                <div class="skill-item"><span>SQL</span>PostgreSQL</div>
+                <div class="skill-item"><span>Django</span>REST APIs</div>
+                <div class="skill-item"><span>Git</span>Version control</div>
+                <div class="skill-item"><span>HTML / CSS</span>Interfaces</div>
             </div>
         </div>
-        <div class="links">
-            <a href="https://github.com/davidmurhi" target="_blank">GitHub</a>
-        </div>
+
+        <footer>
+            <div>
+                <div class="available">
+                    <div class="dot"></div>Open to opportunities
+                </div>
+                <div class="footer-email">davidmurhhi@gmail.com</div>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/davidmurhi" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/davidmurhi" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+
     </div>
 </body>
 
