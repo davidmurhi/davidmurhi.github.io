@@ -58,6 +58,29 @@
             font-style: italic;
         }
 
+        .project {
+            margin-bottom: 1.5rem;
+        }
+
+        .project a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2px;
+        }
+
+        .project a:hover {
+            border-color: #f0f0f0;
+        }
+
+        .project p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.4rem;
+            margin-bottom: 0;
+        }
+
         .links {
             display: flex;
             gap: 1rem;
@@ -86,7 +109,11 @@
             This portfolio grows with every week.</p>
         <div class="projects">
             <h2>Projects</h2>
-            <p class="empty">First project coming soon — Week 1 underway.</p>
+            <div class="project">
+                <a href="https://github.com/davidmurhi/budget-tracker" target="_blank">CLI Budget Tracker</a>
+                <p>A command-line budget tracker built in Python. Add income and expenses,
+                    view balance, and save transactions to CSV. Built in Week 1.</p>
+            </div>
         </div>
         <div class="links">
             <a href="https://github.com/davidmurhi" target="_blank">GitHub</a>
