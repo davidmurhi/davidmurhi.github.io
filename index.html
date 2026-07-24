@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David Murhi — Full-stack Developer</title>
+    <title>David Murhi — Junior Developer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <style>
         *,
@@ -84,6 +84,40 @@
             color: #666;
             line-height: 1.75;
             max-width: 560px;
+            margin-bottom: 24px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #0e1a14;
+            border: 0.5px solid #1a2e20;
+            padding: 6px 14px;
+            border-radius: 99px;
+            font-size: 11px;
+            color: #52a87a;
+        }
+
+        .badge-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #52a87a;
+            animation: pulse 2s ease infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.25;
+            }
         }
 
         .section-label {
@@ -283,10 +317,14 @@
         </nav>
 
         <div class="hero">
-            <div class="hero-tag">Full-stack developer — Brisbane, QLD</div>
-            <h1>Building things<br>for the web.</h1>
-            <p>Python, JavaScript, and SQL. I build full-stack applications — from backend APIs to frontend interfaces —
-                with a focus on clean code and real-world utility.</p>
+            <div class="hero-tag">Junior Developer — Brisbane, QLD</div>
+            <h1>Building things<br>with Python.</h1>
+            <p>Python developer working toward full-stack. I build command-line applications with clean code, persistent
+                storage, and automated tests — and I'm actively expanding into JavaScript, React, and PostgreSQL.</p>
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Currently learning — FastAPI + PostgreSQL + React
+            </div>
         </div>
 
         <div class="projects" id="projects">
@@ -295,8 +333,8 @@
             <div class="project">
                 <div>
                     <div class="proj-title">Habit Tracker</div>
-                    <div class="proj-desc">Command-line habit tracking app with streak counting and persistent storage.
-                        Features add, view, mark-done, and delete functionality. Includes an automated test suite.</div>
+                    <div class="proj-desc">CLI habit tracking app with streak counting and persistent storage. Features
+                        add, view, mark-done, and delete functionality. Includes an automated test suite.</div>
                     <div class="proj-tags">
                         <span class="tag">Python</span>
                         <span class="tag">JSON</span>
@@ -310,8 +348,8 @@
             <div class="project">
                 <div>
                     <div class="proj-title">Contact Book</div>
-                    <div class="proj-desc">Command-line contact manager with add, view, search, and delete
-                        functionality. Case-insensitive search, persistent storage, and automatic save on quit.</div>
+                    <div class="proj-desc">CLI contact manager with add, view, search, and delete functionality.
+                        Case-insensitive search, persistent storage, and automatic save on quit.</div>
                     <div class="proj-tags">
                         <span class="tag">Python</span>
                         <span class="tag">JSON</span>
@@ -343,8 +381,7 @@
                 <div>
                     <div class="proj-title">Password Manager</div>
                     <div class="proj-desc">CLI tool to generate and store strong passwords. Menu-driven interface with
-                        JSON file persistence. Generates cryptographically varied passwords using Python's string and
-                        random modules.</div>
+                        JSON file persistence.</div>
                     <div class="proj-tags">
                         <span class="tag">Python</span>
                         <span class="tag">JSON</span>
@@ -358,7 +395,7 @@
                 <div>
                     <div class="proj-title">Web Scraper</div>
                     <div class="proj-desc">Scrapes 100 quotes and authors across 10 pages from a live website. Exports
-                        clean data to CSV. Built with requests and BeautifulSoup.</div>
+                        clean data to CSV.</div>
                     <div class="proj-tags">
                         <span class="tag">Python</span>
                         <span class="tag">BeautifulSoup</span>
@@ -377,26 +414,6 @@
                 <div class="icon-chip">
                     <i class="devicon-python-plain colored"></i>
                     <span>Python</span>
-                </div>
-
-                <div class="icon-chip">
-                    <i class="devicon-javascript-plain colored"></i>
-                    <span>JavaScript</span>
-                </div>
-
-                <div class="icon-chip">
-                    <i class="devicon-react-original colored"></i>
-                    <span>React</span>
-                </div>
-
-                <div class="icon-chip">
-                    <i class="devicon-postgresql-plain colored"></i>
-                    <span>PostgreSQL</span>
-                </div>
-
-                <div class="icon-chip">
-                    <i class="devicon-fastapi-plain colored"></i>
-                    <span>FastAPI</span>
                 </div>
 
                 <div class="icon-chip">
@@ -427,16 +444,6 @@
                 <div class="icon-chip">
                     <i class="devicon-pytest-plain colored"></i>
                     <span>pytest</span>
-                </div>
-
-                <div class="icon-chip">
-                    <i class="devicon-docker-plain colored"></i>
-                    <span>Docker</span>
-                </div>
-
-                <div class="icon-chip">
-                    <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-                    <span>AWS</span>
                 </div>
 
             </div>
